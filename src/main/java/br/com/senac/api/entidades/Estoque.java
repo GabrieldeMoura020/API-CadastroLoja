@@ -11,11 +11,11 @@ public class Estoque {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "loja_id")
+    @JoinColumn(name = "lojas_id")
     private List<Lojas> tabelaLojas;
 
     @ManyToOne
-    @JoinColumn(name = "produtos_id")
+    @JoinColumn(name = "produto_id")
     private List<Produto> tabelaProdutos;
 
     @Column
