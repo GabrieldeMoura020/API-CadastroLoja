@@ -1,7 +1,7 @@
 package br.com.senac.api.dto;
 
 import br.com.senac.api.entidades.Lojas;
-import br.com.senac.api.entidades.Produto;
+import br.com.senac.api.entidades.Produtos;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ public class EstoqueRequest {
 
     private List<Lojas> tabelaLojas;
 
-    private List<Produto> tabelaProdutos;
+    private List<Produtos> tabelaProdutos;
 
     private Float quantidadeEstoque;
 
@@ -21,11 +21,11 @@ public class EstoqueRequest {
         this.tabelaLojas = tabelaLojas;
     }
 
-    public List<Produto> getTabelaProdutos() {
+    public List<Produtos> getTabelaProdutos() {
         return tabelaProdutos;
     }
 
-    public void setTabelaProdutos(List<Produto> tabelaProdutos) {
+    public void setTabelaProdutos(List<Produtos> tabelaProdutos) {
         this.tabelaProdutos = tabelaProdutos;
     }
 

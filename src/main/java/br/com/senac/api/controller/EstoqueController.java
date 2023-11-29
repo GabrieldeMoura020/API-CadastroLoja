@@ -50,8 +50,8 @@ public class EstoqueController {
     @CrossOrigin
     public ResponseEntity<EstoqueResponse> atualizarEstoque(@PathVariable Long id, @RequestBody Estoque estoque){
         Estoque retorno = estoqueRepository.findById(id).map(record -> {
-            record.setTabelaProdutos(estoque.getTabelaProdutos());
-            record.setTabelaLojas(estoque.getTabelaLojas());
+            record.setProdutos(estoque.getProdutos());
+            record.setLojas(estoque.getLojas());
             record.setQuantidadeEstoque(estoque.getQuantidadeEstoque());
             return estoqueRepository.save(record);
         }).get();

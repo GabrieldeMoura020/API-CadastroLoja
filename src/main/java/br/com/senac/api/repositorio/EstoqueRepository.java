@@ -11,9 +11,9 @@ import java.util.List;
 @Repository
 public interface EstoqueRepository extends JpaRepository<Estoque, Long> {
 
-    @Query("select c from estoque c where produtos_id like %:produtos_id%")
+    @Query("select c from estoque c where c.produtos.id = :produtos_id")
     public List<Estoque> findByProdutos(@Param("produtos_id") String produtos_id);
 
-    @Query("select c from estoque c where loja_id like %:loja_id%")
+    @Query("select c from estoque c where c.lojas.id = :loja_id")
     public List<Estoque> findByLojas(@Param("loja_id") String loja_id);
 }

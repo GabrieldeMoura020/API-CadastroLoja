@@ -2,7 +2,7 @@ package br.com.senac.api.entidades;
 
 import jakarta.persistence.*;
 
-
+@Entity(name = "lojas")
 public class Lojas {
 
     @Id

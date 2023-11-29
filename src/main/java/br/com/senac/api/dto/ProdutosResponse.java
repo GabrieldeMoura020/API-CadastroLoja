@@ -1,6 +1,6 @@
 package br.com.senac.api.dto;
 
-public class ProdutoResponse {
+public class ProdutosResponse {
 
     private Long id;
 

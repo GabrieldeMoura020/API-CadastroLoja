@@ -2,8 +2,7 @@ package br.com.senac.api.entidades;
 
 import jakarta.persistence.*;
 
-import java.util.List;
-
+@Entity(name = "estoque")
 public class Estoque {
 
     @Id
@@ -12,11 +11,11 @@ public class Estoque {
 
     @ManyToOne
     @JoinColumn(name = "lojas_id")
-    private List<Lojas> tabelaLojas;
+    private Lojas lojas;
 
     @ManyToOne
-    @JoinColumn(name = "produto_id")
-    private List<Produto> tabelaProdutos;
+    @JoinColumn(name = "produtos_id")
+    private Produtos produtos;
 
     @Column
     private Float quantidadeEstoque;
@@ -29,20 +28,20 @@ public class Estoque {
         this.id = id;
     }
 
-    public List<Lojas> getTabelaLojas() {
-        return tabelaLojas;
+    public Lojas getLojas() {
+        return lojas;
     }
 
-    public void setTabelaLojas(List<Lojas> tabelaLojas) {
-        this.tabelaLojas = tabelaLojas;
+    public void setLojas(Lojas lojas) {
+        this.lojas = lojas;
     }
 
-    public List<Produto> getTabelaProdutos() {
-        return tabelaProdutos;
+    public Produtos getProdutos() {
+        return produtos;
     }
 
-    public void setTabelaProdutos(List<Produto> tabelaProdutos) {
-        this.tabelaProdutos = tabelaProdutos;
+    public void setProdutos(Produtos produtos) {
+        this.produtos = produtos;
     }
 
     public Float getQuantidadeEstoque() {

@@ -1,20 +1,13 @@
-package br.com.senac.api.entidades;
+package br.com.senac.api.dto;
 
-import jakarta.persistence.*;
+public class ProdutosRequest {
 
-public class Produto {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column
     private String codigoEan;
 
-    @Column
     private String nome;
 
-    @Column
     private String descricao;
 
     public Long getId() {

@@ -1,17 +1,12 @@
 package br.com.senac.api.dto;
 
-import br.com.senac.api.entidades.Lojas;
-import br.com.senac.api.entidades.Produto;
-
-import java.util.List;
-
 public class EstoqueResponse {
 
     private Long id;
 
-    private List<Lojas> tabelaLojas;
+    private Long lojas_id;
 
-    private List<Produto> tabelaProdutos;
+    private Long produto_id;
 
     private Float quantidadeEstoque;
 
@@ -23,20 +18,20 @@ public class EstoqueResponse {
         this.id = id;
     }
 
-    public List<Lojas> getTabelaLojas() {
-        return tabelaLojas;
+    public Long getLojas_id() {
+        return lojas_id;
     }
 
-    public void setTabelaLojas(List<Lojas> tabelaLojas) {
-        this.tabelaLojas = tabelaLojas;
+    public void setLojas_id(Long lojas_id) {
+        this.lojas_id = lojas_id;
     }
 
-    public List<Produto> getTabelaProdutos() {
-        return tabelaProdutos;
+    public Long getProduto_id() {
+        return produto_id;
     }
 
-    public void setTabelaProdutos(List<Produto> tabelaProdutos) {
-        this.tabelaProdutos = tabelaProdutos;
+    public void setProduto_id(Long produto_id) {
+        this.produto_id = produto_id;
     }
 
     public Float getQuantidadeEstoque() {
