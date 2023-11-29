@@ -8,7 +8,7 @@ public class EstoqueMapper {
 
     public static Estoque estoqueRequestToEstoque(EstoqueRequest estoque){
         Estoque out = new Estoque();
-        out.setQuantidadeEstoque(out.getQuantidadeEstoque());
+        out.setQuantidadeEstoque(estoque.getQuantidadeEstoque());
         out.setLojas(out.getLojas());
         out.setProdutos(out.getProdutos());
 
@@ -17,8 +17,8 @@ public class EstoqueMapper {
 
     public static EstoqueResponse estoqueToEstoqueResponse(Estoque estoque){
         EstoqueResponse out = new EstoqueResponse();
-        out.setId(out.getId());
-        out.setQuantidadeEstoque(out.getQuantidadeEstoque());
+        out.setId(estoque.getId());
+        out.setQuantidadeEstoque(estoque.getQuantidadeEstoque());
 
         return out;
     }

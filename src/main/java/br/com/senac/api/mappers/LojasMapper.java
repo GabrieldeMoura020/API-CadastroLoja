@@ -17,10 +17,10 @@ public class LojasMapper {
 
     public static LojasResponse lojasToLojasResponse(Lojas lojas){
         LojasResponse out = new LojasResponse();
-        out.setId(out.getId());
-        out.setNome(out.getNome());
-        out.setCnpj(out.getCnpj());
-        out.setResponsavel(out.getResponsavel());
+        out.setId(lojas.getId());
+        out.setNome(lojas.getNome());
+        out.setCnpj(lojas.getCnpj());
+        out.setResponsavel(lojas.getResponsavel());
 
         return out;
     }
